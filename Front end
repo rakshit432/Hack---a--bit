@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent-a-Ride</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rent-a-Ride</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rent-out">Rent My Vehicle</a></li>
+                <li><a href="#hire">Hire a Vehicle</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="home">
+            <h2>Welcome to Rent-a-Ride</h2>
+            <p>Find your perfect rental vehicle .</p>
+            <button onclick="toggleSearch()">Search Vehicles</button>
+        </section>
+
+        <section id="search" style="display: none;">
+            <form id="searchForm">
+                <label for="location">Pick-up Location:</label>
+                <input type="text" id="location" name="location" required><br>
+                <label for="pickupDate">Pick-up Date:</label>
+                <input type="date" id="pickupDate" name="pickupDate" required><br>
+                <label for="dropoffDate">Drop-off Date:</label>
+                <input type="date" id="dropoffDate" name="dropoffDate" required><br>
+                <button type="submit">Search</button>
+            </form>
+            <div id="searchResults"></div> </section>
+
+        <section id="rent-out">
+            <h2>List Your Vehicle</h2>
+            <p>Earn extra income by renting out your car, truck, or other vehicle.</p>
+            <button onclick="showListingForm()">List Your Vehicle</button>
+        </section>
+
+        <section id="listing-form" style="display: none;">
+            <form id="listingForm">
+                <label for="vehicleMake">Make:</label>
+                <input type="text" id="vehicleMake" name="vehicleMake" required><br>
+                <label for="vehicleModel">Model:</label>
+                <input type="text" id="vehicleModel" name="vehicleModel" required><br>
+                <button type="submit">Submit Listing</button>
+            </form>
+        </section>
+
+        <section id="hire">
+            <h2>Hire a Vehicle</h2>
+            <p>Find a perfect ride for your needs at an affordable price.</p>
+            <button onclick="toggleSearch()">Browse Vehicles</button>
+        </section>
+
+        <section id="about">
+            <h2>About Rent-a-Ride</h2>
+            <p>Your trusted platform for convenient and affordable vehicle rentals.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have any questions or need help? Contact us here.</p>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; Rent-a-Ride, 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
